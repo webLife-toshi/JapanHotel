@@ -1,0 +1,6 @@
+<h1>Administrator Index</h1>
+<%= t('date.addr_day_names') %>
+<% @administrator.each do |admin| %>
+<%= link_to admin.admin_name, admin_administrator_path(admin) %>
+<% end %>
+
