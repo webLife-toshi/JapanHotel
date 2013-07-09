@@ -9,5 +9,6 @@ class CreateAdministrators < ActiveRecord::Migration
 
       t.timestamps
     end
+   add_index :administrators, :admin_remember_token
   end
 end

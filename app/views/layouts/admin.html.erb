@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JapanHotel</title>
+  <title>Hotelsite</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -11,12 +11,11 @@
     <%= content_tag :div, msg, :id => "flash#{name}" %>
   <% end %>
 <div id="user_nav">
-  <% if current_user %>
-    Logged in as <%= current_user.email %>
-    <%= link_to "Log out", log_out_path %>
+  <% if current_administrator %>
+    Logged in as <%= current_administrator.admin_name %>
+    <%= link_to "Log out", admin_log_out_path %>
   <% else %>
-    <%= link_to "Sign up", sign_up_path %> or
-    <%= link_to "Log in", log_in_path %>
+    <%= link_to "Log in", admin_log_in_path %>
   <% end %>
 </div>
 <div id="nav">
@@ -24,8 +23,9 @@
 <%= link_to_unless_current "Japanese", locale: "ja" %> |
 <%= link_to_unless_current "Korean", locale: "ko" %> |
 </div>
-
 <%= yield %>
 <%= debug(params) if Rails.env.development? %>
+</
 </body>
 </html>
+

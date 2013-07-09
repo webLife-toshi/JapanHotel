@@ -1,5 +1,22 @@
 JapanHotel::Application.routes.draw do
 
+  get "static_pages/home"
+
+  get "static_pages/about"
+
+  match "/" => "static_pages#home", :as => :root
+  match "/about" => "static_pages#about", :as => :about
+
+
+  get "password_resets/new"
+  resources :password_resets
+  resources :users, only: [:new, :create, :show, :edit, :update]
+   match "/sign_up" => "users#new", :as => :sign_up
+
+   resources :sessions, only: [:new, :create, :destroy]
+   match "/log_in" => "sessions#new", :as => :log_in
+   match "/log_out" => "sessions#destroy", :as => :log_out
+
   namespace :admin do
    resources :administrators # except: [:new]
    resources :sessions, only: [:new, :create, :destroy]
