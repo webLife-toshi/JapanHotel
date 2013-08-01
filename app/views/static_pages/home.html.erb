@@ -1,2 +1,69 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<h1>日本の人気ホテル検索サイト</h1>
+<p>ただいま、作成中好ご期待。</p>
+<div class="row">
+  <div class="span8">
+    <div class="row">
+      <div class="span2 sidebar">
+	<h1>国内旅行</h1>
+      </div>
+      <div class="span6 main">
+<!-- 検索 -->
+<div><h1>キーワード検索</h1></div>
+  <div class="row">
+    <div class="span6 search_map">
+      <h3>マップ検索</h3>
+       <div class="name_pin">
+<button class="btn btn-info hokkaido"><%= link_to "北海道・東北", "#"%></button>
+<button class="btn btn-info koushinetu"><%= link_to "甲信越・北陸・東海", "#"%></button>
+<button class="btn btn-info kantou"><%= link_to "関東", "#"%></button>
+<button class="btn btn-info tokyo"><%= link_to "東京", "#"%></button>
+
+<button class="btn btn-info hakone"><%= link_to "箱根・熱海・伊豆", "#"%></button>
+
+<button class="btn btn-info hokkaido"><%= link_to "関西", "#"%></button>
+
+<!--<button class="btn btn-info hokkaido"><%= link_to "北海道・東北", "#"%></button>
+
+<button class="btn btn-info hokkaido"><%= link_to "北海道・東北", "#"%></button>
+-->
+       </div>
+    </div>
+       <div class="row">
+          <form class="well form-inline span6 main_search">
+		
+           <div class="index_form_list">
+	     <label>ホテル名</label>
+             <input class="input-xlarge" type="text" placeholder="例：東京、東京ホテル">
+	   </div>
+           <div  class="index_form_list">
+             <label for="from">宿泊日</label>
+             <input class="input-small" type="text" id="from" name="from" />
+             <!-- <label class="span1" for="to"></label>-->
+             <input class="input-small" type="text" id="to" name="to" />
+           </div>
+           <div  class="index_form_list">
+             <label for="room">部屋数</label>
+             <input class="span1" id="room" name="room" value="1" />室
+           </div>
+           <div  class="index_form_list">
+             <label for="adult">大人</label>
+             <input class="span1" id="adult" name="adult" value="1" />人
+           </div>
+           <div  class="index_form_list">
+	     <label for="child">お子様</label>
+	     <input class="span1" id="child" name="child" value="1" />人
+           </div>
+           <button type="submit" class="btn">検索する</button>
+          </form>
+       </div>
+  </div>
+<!-- 検索 end-->
+      </div>
+      <div class="row">
+        <div class="span8">
+	  <h1>オススメ旅行特集</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

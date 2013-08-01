@@ -1,0 +1,26 @@
+
+<div class="row">
+ <% @area.each do |area| %>
+  <b><%= area.state %> ></b>
+  <b><%= area.city %></b>
+  <% end %>
+  <div class="span6">
+    <h3><%= @hotel.name_ja%></h3>
+    <h3><%= @hotel.name_en %></h3>
+  </div>
+  <div class="span2">
+    <p>日時を指定する</p>
+  </div>
+</div>
+<div class="row">
+  <div class="span6">
+    <%= @hotel.description%>
+  </div>
+  <div class="span2">
+    <% @photo.each do |photo| %>
+      <div><%= photo.name %></div>
+      <div><%= image_tag photo.image_url.to_s %></div>
+    <% end %>
+  </div>
+</div>
+

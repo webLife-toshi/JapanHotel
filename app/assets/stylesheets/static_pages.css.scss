@@ -1,3 +1,60 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+label {
+ width: 60px;
+}
+div.search_map {
+  height: 470px;
+  background-image: url( /assets/japan_map.png);
+  background-repeat: no-repeat;
+  background-position: 80px 30px;
+  border: 1px solid #000;
+}
+
+form.main_search {
+  width: 280px;
+}
+
+div.index_form_list{
+  margin: 3px 0px;
+}
+
+div.name_pin{
+  position:absolute;
+}
+
+div.name_pin button a{
+  color: #fff;
+}
+
+button.hokkaido{
+  position:relative;
+  top: 57px;
+  left: 310px;
+}
+
+button.koushinetu{
+  position:relative;
+  top: 160px;
+  left: 100px;
+}
+
+button.kantou{
+  position:relative;
+  top:200px;
+  left: 90px;
+}
+
+button.tokyo{
+  position:relative;
+  top: 235px;
+  left: 30px;
+}
+
+button.hakone{
+  position:relative;
+  top: 273px;
+  left: -27px;
+}

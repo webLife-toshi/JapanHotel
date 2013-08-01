@@ -3,10 +3,18 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'bootstrap-sass'
+gem 'carrierwave'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
+
+  gem 'rack', '1.4.5'
+  gem 'daemons', '1.1.9'
+  gem 'eventmachine', '1.0.3'
+  gem 'thin', '1.5.1'
+
 group :development, :test do
 gem 'sqlite3'
+gem 'bullet'
 
 end
 # Gems used only for assets and not required
