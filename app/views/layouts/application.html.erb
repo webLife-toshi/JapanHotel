@@ -66,11 +66,10 @@
 	  <li><%= link_to "レンタカー", "#" %></li>
 	  <li><%= link_to "高級旅館・ホテル", "#" %></li>
 	</ul>
-       <%= form_tag root_path, method: :get, :class => 'navbar-form pull-right' do %>
-    <%= text_field_tag :search, params[:search], :class =>'span4', :placeholder =>'Type Search terms' %>
-    <%= button_tag "Search", name: nil, :class => 'btn' %>
-<% end %>
-
+ <!--        <form class="form-search">
+	    <input type="text" class="input-medium search-query">
+	    <button type="submit" class="btn">Search</button>
+	 </form>-->
       </div>
     </div>
   </div>

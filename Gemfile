@@ -4,6 +4,7 @@ gem 'rails', '3.2.13'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'bootstrap-sass'
 gem 'carrierwave'
+gem 'ransack'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

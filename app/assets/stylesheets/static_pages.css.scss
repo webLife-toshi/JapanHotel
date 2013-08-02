@@ -10,7 +10,11 @@ div.search_map {
   background-image: url( /assets/japan_map.png);
   background-repeat: no-repeat;
   background-position: 80px 30px;
-  border: 1px solid #000;
+}
+
+h4.search_map_title{
+  background-color: blue;
+  color: white;
 }
 
 form.main_search {
@@ -28,33 +32,88 @@ div.name_pin{
 div.name_pin button a{
   color: #fff;
 }
-
+/******* map category ********/
 button.hokkaido{
   position:relative;
-  top: 57px;
-  left: 310px;
+  top: 10px;
+  left: 340px;
+}
+
+button.touhoku{
+  position:relative;
+  top: 90px;
+  left: 300px;
 }
 
 button.koushinetu{
   position:relative;
-  top: 160px;
-  left: 100px;
+  top: 220px;
+  left: 165px;
+}
+
+button.hokuriku{
+  position:relative;
+  top: 185px;
+  left: 75px;
+}
+
+button.toukai{
+  position:relative;
+  top: 260px;
+  left: 25px;
 }
 
 button.kantou{
   position:relative;
-  top:200px;
-  left: 90px;
+  top:220px;
+  left: 60px;
 }
 
 button.tokyo{
   position:relative;
-  top: 235px;
-  left: 30px;
+  top: 255px;
+  left: 0px;
 }
 
 button.hakone{
   position:relative;
-  top: 273px;
-  left: -27px;
+  top: 290px;
+  left: -60px;
 }
+
+button.osaka{
+  position:relative;
+  top: 235px;
+  left: -340px;
+}
+
+button.kinki{
+  position:relative;
+  top: 275px;
+  left: -400px;
+}
+
+button.tyugoku{
+  position:relative;
+  top: 235px;
+  left: -520px;
+}
+
+button.shikoku{
+  position:relative;
+  top:275px;
+  left: -580px;
+}
+
+button.kyusyu{
+  position:relative;
+  top: 295px;
+  left: -700px;
+}
+
+button.okinawa{
+  position:relative;
+  top: 370px;
+  left: -800px;
+}
+/**************************/

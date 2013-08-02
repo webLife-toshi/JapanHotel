@@ -9,23 +9,36 @@
       <div class="span6 main">
 <!-- 検索 -->
 <div><h1>キーワード検索</h1></div>
+        <%= search_form_for @q, :url => hotel_search_path, method: :get, :class => 'navbar-form pull-right' do |hotel_search| %>
+    <%= hotel_search.text_field :name_en_cont, :class => 'span4', :placeholder =>'Type Search terms' %>
+    <%= hotel_search.submit  "Search", name: nil, :class => 'btn' %>
+<% end %>
+
   <div class="row">
     <div class="span6 search_map">
-      <h3>マップ検索</h3>
+      <h4 class="search_map_title">地図から探す</h4>
        <div class="name_pin">
-<button class="btn btn-info hokkaido"><%= link_to "北海道・東北", "#"%></button>
-<button class="btn btn-info koushinetu"><%= link_to "甲信越・北陸・東海", "#"%></button>
+<button class="btn btn-info hokkaido"><%= link_to "北海道", "#"%></button>
+<button class="btn btn-info touhoku"><%= link_to "東北", "#"%></button>
+<button class="btn btn-info koushinetu"><%= link_to "甲信越", "#"%></button>
+<button class="btn btn-info hokuriku"><%= link_to "北陸", "#"%></button>
+<button class="btn btn-info toukai"><%= link_to "東海", "#"%></button>
 <button class="btn btn-info kantou"><%= link_to "関東", "#"%></button>
 <button class="btn btn-info tokyo"><%= link_to "東京", "#"%></button>
 
 <button class="btn btn-info hakone"><%= link_to "箱根・熱海・伊豆", "#"%></button>
 
-<button class="btn btn-info hokkaido"><%= link_to "関西", "#"%></button>
+<button class="btn btn-info osaka"><%= link_to "大阪", "#"%></button>
 
-<!--<button class="btn btn-info hokkaido"><%= link_to "北海道・東北", "#"%></button>
+<button class="btn btn-info kinki"><%= link_to "近畿", "#"%></button>
 
-<button class="btn btn-info hokkaido"><%= link_to "北海道・東北", "#"%></button>
--->
+<button class="btn btn-info tyugoku"><%= link_to "中国", "#"%></button>
+
+<button class="btn btn-info shikoku"><%= link_to "四国", "#"%></button>
+
+<button class="btn btn-info kyusyu"><%= link_to "九州", "#"%></button>
+
+<button class="btn btn-info okinawa"><%= link_to "沖縄", "#"%></button>
        </div>
     </div>
        <div class="row">
