@@ -9,10 +9,6 @@
       <div class="span6 main">
 <!-- 検索 -->
 <div><h1>キーワード検索</h1></div>
-        <%= search_form_for @q, :url => hotel_search_path, method: :get, :class => 'navbar-form pull-right' do |hotel_search| %>
-    <%= hotel_search.text_field :name_en_cont, :class => 'span4', :placeholder =>'Type Search terms' %>
-    <%= hotel_search.submit  "Search", name: nil, :class => 'btn' %>
-<% end %>
 
   <div class="row">
     <div class="span6 search_map">
@@ -42,6 +38,7 @@
        </div>
     </div>
        <div class="row">
+	  
           <form class="well form-inline span6 main_search">
 		
            <div class="index_form_list">
@@ -68,6 +65,23 @@
            </div>
            <button type="submit" class="btn">検索する</button>
           </form>
+       </div>
+       <div class="row" onload="initNave()">
+        <form name="frmSearch" method="post" action="http://jws.jalan.net/APIAdvance/StockSearch/V1/" target="_blank">
+<input type="hidden" name="key" value="vir13f526be34e">
+	<label>都道府県</label>
+        <select class="pulldowns" name="pref"  id="pref" onChange="chgBigArea(this)">
+                <option value="">Choose Prefecture</option>
+        </select>
+       <label>大エリア</label>
+<select class="pulldowns" name="l_area" id="l_area" onChange="chgSmallArea(this)">
+                <option value="">Choose Area</option>
+        </select>
+<input type="hidden" name="start" value="1" />
+<input type="hidden" name="count" value="10" />
+<input type="hidden" name="pict_size" value="0" />
+<input name="search" id="search" type="submit" value="search" alt="この条件で検>索" />
+</form>
        </div>
   </div>
 <!-- 検索 end-->

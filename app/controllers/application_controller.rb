@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 private
 
   def h_search
-       @q = Hotel.search(params[:q])
+    @q = Hotel.search(params[:q])
     @q.sorts = "name_en asc"
     @hotels = @q.result
   end

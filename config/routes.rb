@@ -6,7 +6,7 @@ JapanHotel::Application.routes.draw do
 
   match "/" => "static_pages#home", :as => :root
   match "/about" => "static_pages#about", :as => :about
-  match "/hotel_search" => "static_pages#hotel_search", :as => :hotel_search
+  match "/hotel_search" => "static_pages#hotel_search", :via =>:get, :as => :hotel_search
   resources :hotels, only: [:show]
   #get "password_resets/new"
   resources :password_resets

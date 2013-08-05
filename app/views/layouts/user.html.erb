@@ -20,26 +20,26 @@
   <div class="row-fluid">
     <div class="span12">
       <div class="row-fluid">
-	<div class="span1">
-	 logo
-	</div>
-	<div class="span7">
-	  Japan Hotel Site
-	</div>
-	<div class="span4">
-	 <%= link_to_unless_current "English", locale: "en" %> |
-	 <%= link_to_unless_current "Japanese", locale: "ja" %> |
-	 <%= link_to_unless_current "Korean", locale: "ko" %> |
+        <div class="span1">
+         logo
+        </div>
+        <div class="span7">
+          Japan Hotel Site
+        </div>
+        <div class="span4">
+         <%= link_to_unless_current "English", locale: "en" %> |
+         <%= link_to_unless_current "Japanese", locale: "ja" %> |
+         <%= link_to_unless_current "Korean", locale: "ko" %> |
 
-	  <% if current_user %>
-	    Logged in as <%= current_user.email %>
-	    <%= link_to "Log out", log_out_path %>
-	  <% else %>
-	    <%= link_to "Sign up", sign_up_path %> or
-	    <%= link_to "Log in", log_in_path %>
-	  <% end %>
-	</div>
-	</div>
+          <% if current_user %>
+            Logged in as <%= current_user.email %>
+            <%= link_to "Log out", log_out_path %>
+          <% else %>
+            <%= link_to "Sign up", sign_up_path %> or
+            <%= link_to "Log in", log_in_path %>
+          <% end %>
+        </div>
+        </div>
       </div>
     </div>
   </div>
@@ -51,21 +51,21 @@
   <div class="navbar-inner">
     <div class="container">
       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-	<span class="icon-bar"></span>
-	<span class="icon-bar"></span>
-	<span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
       </a>
       <a class="brand" href="#"></a>
       <div class="nav-collapse collapse">
-	<ul class="nav">
-	  <li class="active"><%= link_to "Home", root_path %></li>
-	  <li><%= link_to "オススメパック", "#" %></li>
-	  <li><%= link_to "ツアー", "#" %></li>
-	  <li><%= link_to "現地ツアー・日帰り", "#" %></li>
-	  <li><%= link_to "空港券", "#" %></li>
-	  <li><%= link_to "レンタカー", "#" %></li>
-	  <li><%= link_to "高級旅館・ホテル", "#" %></li>
-	</ul>
+        <ul class="nav">
+          <li class="active"><%= link_to "Home", root_path %></li>
+          <li><%= link_to "オススメパック", "#" %></li>
+          <li><%= link_to "ツアー", "#" %></li>
+          <li><%= link_to "現地ツアー・日帰り", "#" %></li>
+          <li><%= link_to "空港券", "#" %></li>
+          <li><%= link_to "レンタカー", "#" %></li>
+          <li><%= link_to "高級旅館・ホテル", "#" %></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -79,11 +79,7 @@
     <%= yield %>
     </div>
     <div class="span4">
-      <%= search_form_for @q, :url => hotel_search_path, method: :get do |h_search| %>
-    <%= h_search.text_field :name_en_or_name_ja_cont, :class => 'span3 ransack-form', :placeholder =>'Type Search terms' %>
-    <%= h_search.submit  "Search", name: nil, :class => 'btn btn_fix' %>
-<% end %>
-
+     ユーザサイドバー
     </div>
   </div>
 </div>
