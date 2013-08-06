@@ -1,5 +1,40 @@
 @import "bootstrap";
 @import "bootstrap-responsive";
 
-.btn_fix {
+#map img{
+  max-width: none;
 }
+
+#map label{
+  width: auto;
+  display:inline;
+}
+/***** facility css ******/
+.facility-true{
+  width:27px;
+  height:27px;
+  background: url(image_path('check_icon.png')) no-repeat 0px -57px;
+}
+
+.facility-false{
+  width:27px;
+  height:27px;
+  background: url(image_path('check_icon.png')) no-repeat 0px -27px;
+}
+
+/****** facility css end *******/
+
+
+/***** wifi css *****/
+.freewifi-true{
+  width: 50px;
+  height: 50px;
+  background: url(image_path('wifi.jpg')) no-repeat -300px 0px;
+}
+
+.freewifi-false{
+  width: 50px;
+  height: 50px;
+  background: url(image_path('wifi.jpg')) no-repeat -400px -50px;
+}
+/***** wifi css end *****/

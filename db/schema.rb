@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130731084022) do
+ActiveRecord::Schema.define(:version => 20130806101539) do
 
   create_table "administrators", :force => true do |t|
     t.string   "admin_name"
@@ -24,6 +24,32 @@ ActiveRecord::Schema.define(:version => 20130731084022) do
   end
 
   add_index "administrators", ["admin_remember_token"], :name => "index_administrators_on_admin_remember_token"
+
+  create_table "amenities", :force => true do |t|
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.boolean  "HandTowel"
+    t.boolean  "TeethBrush"
+    t.boolean  "BathTowel"
+    t.boolean  "Shampoo"
+    t.boolean  "Conditioner"
+    t.boolean  "BodySoap"
+    t.boolean  "Soap"
+    t.boolean  "Yukata"
+    t.boolean  "Sleepwear"
+    t.boolean  "Bathrobe"
+  end
+
+  add_index "amenities", ["BathTowel"], :name => "index_amenities_on_BathTowel"
+  add_index "amenities", ["Bathrobe"], :name => "index_amenities_on_Bathrobe"
+  add_index "amenities", ["BodySoap"], :name => "index_amenities_on_BodySoap"
+  add_index "amenities", ["Conditioner"], :name => "index_amenities_on_Conditioner"
+  add_index "amenities", ["HandTowel"], :name => "index_amenities_on_HandTowel"
+  add_index "amenities", ["Shampoo"], :name => "index_amenities_on_Shampoo"
+  add_index "amenities", ["Sleepwear"], :name => "index_amenities_on_Sleepwear"
+  add_index "amenities", ["Soap"], :name => "index_amenities_on_Soap"
+  add_index "amenities", ["TeethBrush"], :name => "index_amenities_on_TeethBrush"
+  add_index "amenities", ["Yukata"], :name => "index_amenities_on_Yukata"
 
   create_table "areas", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -96,6 +122,16 @@ ActiveRecord::Schema.define(:version => 20130731084022) do
   add_index "facilities", ["Tours"], :name => "index_facilities_on_Tours"
   add_index "facilities", ["WifiPublicAreas"], :name => "index_facilities_on_WifiPublicAreas"
 
+  create_table "hotel_amenities", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "hotel_id"
+    t.integer  "amenity_id"
+  end
+
+  add_index "hotel_amenities", ["amenity_id"], :name => "index_hotel_amenities_on_amenity_id"
+  add_index "hotel_amenities", ["hotel_id"], :name => "index_hotel_amenities_on_hotel_id"
+
   create_table "hotel_areas", :force => true do |t|
     t.integer  "hotel_id"
     t.integer  "area_id"
@@ -147,6 +183,7 @@ ActiveRecord::Schema.define(:version => 20130731084022) do
     t.string   "link_agoda"
     t.string   "link_expedia"
     t.string   "link_hotelscom"
+    t.float    "price_ja"
   end
 
   add_index "hotels", ["charged_wifi"], :name => "index_hotels_on_charged_wifi"
@@ -188,6 +225,52 @@ ActiveRecord::Schema.define(:version => 20130731084022) do
   end
 
   add_index "photos", ["name"], :name => "index_photos_on_name"
+
+  create_table "recreations", :force => true do |t|
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+    t.boolean  "FitnessCenter"
+    t.boolean  "GamesRoom"
+    t.boolean  "garden"
+    t.boolean  "GolfCourseOnSite"
+    t.boolean  "GolfCourseWithin3km"
+    t.boolean  "HotSpringBath"
+    t.boolean  "IndoorPool"
+    t.boolean  "Jacuzzi"
+    t.boolean  "KidsClub"
+    t.boolean  "Massage"
+    t.boolean  "OutdoorPool"
+    t.boolean  "KidPool"
+    t.boolean  "PrivateBeach"
+    t.boolean  "Sauna"
+    t.boolean  "Spa"
+    t.boolean  "SquashCourts"
+    t.boolean  "SteamRoom"
+    t.boolean  "TennisCourts"
+    t.boolean  "WaterSportsMotorized"
+    t.boolean  "WaterSportsNonmotorized"
+  end
+
+  add_index "recreations", ["FitnessCenter"], :name => "index_recreations_on_FitnessCenter"
+  add_index "recreations", ["GamesRoom"], :name => "index_recreations_on_GamesRoom"
+  add_index "recreations", ["GolfCourseOnSite"], :name => "index_recreations_on_GolfCourseOnSite"
+  add_index "recreations", ["GolfCourseWithin3km"], :name => "index_recreations_on_GolfCourseWithin3km"
+  add_index "recreations", ["HotSpringBath"], :name => "index_recreations_on_HotSpringBath"
+  add_index "recreations", ["IndoorPool"], :name => "index_recreations_on_IndoorPool"
+  add_index "recreations", ["Jacuzzi"], :name => "index_recreations_on_Jacuzzi"
+  add_index "recreations", ["KidPool"], :name => "index_recreations_on_KidPool"
+  add_index "recreations", ["KidsClub"], :name => "index_recreations_on_KidsClub"
+  add_index "recreations", ["Massage"], :name => "index_recreations_on_Massage"
+  add_index "recreations", ["OutdoorPool"], :name => "index_recreations_on_OutdoorPool"
+  add_index "recreations", ["PrivateBeach"], :name => "index_recreations_on_PrivateBeach"
+  add_index "recreations", ["Sauna"], :name => "index_recreations_on_Sauna"
+  add_index "recreations", ["Spa"], :name => "index_recreations_on_Spa"
+  add_index "recreations", ["SquashCourts"], :name => "index_recreations_on_SquashCourts"
+  add_index "recreations", ["SteamRoom"], :name => "index_recreations_on_SteamRoom"
+  add_index "recreations", ["TennisCourts"], :name => "index_recreations_on_TennisCourts"
+  add_index "recreations", ["WaterSportsMotorized"], :name => "index_recreations_on_WaterSportsMotorized"
+  add_index "recreations", ["WaterSportsNonmotorized"], :name => "index_recreations_on_WaterSportsNonmotorized"
+  add_index "recreations", ["garden"], :name => "index_recreations_on_garden"
 
   create_table "users", :force => true do |t|
     t.string   "name"

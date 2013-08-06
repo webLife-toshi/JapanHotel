@@ -1,6 +1,6 @@
 class Admin::HotelsController < Admin::AdminController
 
-  before_filter :authenticate_administrator
+#  before_filter :authenticate_administrator
   def index
     @hotel = Hotel.all
   end
