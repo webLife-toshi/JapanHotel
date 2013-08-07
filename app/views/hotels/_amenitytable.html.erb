@@ -1,0 +1,39 @@
+<div class="row">
+   <h4>アメニティー 一覧</h4>
+   <% @amenity.each do |ame|%>
+   <table class="amenity-list">
+   <tr>
+     <td class="amelist-image"><div class="amenity-<%= ame.HandTowel %>"></div></td>
+     <td class="amelist-title">Hand Towel</td>
+
+     <td class="amelist-image"><div class="amenity-<%= ame.TeethBrush %>"></div></td>
+     <td class="amelist-title">Teeth Brush</td>
+
+     <td class="amelist-image"><div class="amenity-<%= ame.BathTowel %>"></div></td>
+     <td class="amelist-title">Bath Towel</td>
+
+     <td class="amelist-image"><div class="amenity-<%= ame.Shampoo %>"</td>
+     <td class="amelist-title">Shampoo</td>
+
+     <td class="amelist-image"><div class="amenity-<%= ame.Conditioner %>"></td>
+     <td class="amelist-title">Conditioner</td>
+   </tr>
+   <tr>
+     <td class="amelist-image"><div class="amenity-<%= ame.BodySoap %>"></div></td>
+     <td class="amelist-title">Body Soap</td>
+
+     <td class="amelist-image"><div class="amenity-<%= ame.Soap %>"></div></td>
+     <td class="amelist-title">Soap</td>
+
+     <td class="amelist-image"><div class="amenity-<%= ame.Yukata %>"></div></td>
+     <td class="amelist-title">Yukata</td>
+
+     <td class="amelist-image"><div class="amenity-<%= ame.Sleepwear %>"></div></td>
+     <td class="amelist-title">Sleepwear</td>
+
+     <td class="amelist-image"><div class="amenity-<%= ame.Bathrobe %>"></td>
+     <td class="amelist-title">Bathrobe</td>
+   </tr>
+</table>
+<% end %>
+</div>

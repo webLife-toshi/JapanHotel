@@ -1,0 +1,91 @@
+<div class="row">
+   <h4>ファシリティー 一覧</h4>
+   <% @facility.each do |fac|%>
+   <table class="facility-list">
+   <tr>
+     <td class="faclist-image"><div class="facility-<%= fac.RoomService24hr%>"></div></td>
+     <td class="faclist-title">Room Service 24hr</td>
+
+     <td class="faclist-image"><div class="facility-<%= fac.AirportTransfer %>"></div></td>
+     <td class="faclist-title">Airport Transfer</td>
+
+     <td class="faclist-image"><div class="facility-<%= fac.BabySitting %>"></div></td>
+     <td class="faclist-title">Baby Sitting</td>
+
+     <td class="faclist-image"><div class="facility-<%= fac.BarPub%>"</td>
+     <td class="faclist-title">Bar/Pub</td>
+
+     <td class="faclist-image"><div class="facility-<%= fac.BicycleRental%>"></td>
+     <td class="faclist-title">Bicycle Rental</td>
+   </tr>
+   <tr>
+     <td class="faclist-image"><div class="facility-<%= fac.BusinessCenter %>"></div></td>
+     <td class="faclist-title">Business Center</td>
+
+     <td class="faclist-image"><div class="facility-<%= fac.Casino %>"></div></td>
+     <td class="faclist-title">Casino</td>
+
+     <td class="faclist-image"><div class="facility-<%= fac.DisabledFacilities %>"></div></td>
+     <td class="faclist-title">Disabled Facilities</td>
+
+     <td class="faclist-image"><div class="facility-<%= fac.Elevator%>"></div></td>
+     <td class="faclist-title">Elevator</td>
+
+     <td class="faclist-image"><div class="facility-<%= fac.ExecutiveFloor %>"></td>
+     <td class="faclist-title">Executive Floor</td>
+   </tr>
+   <tr>
+     <td class="faclist-image"><div class="facility-<%= fac.FamilyRoom%>"></td>
+     <td class="faclist-title">Family Room</td>
+
+     <td class="faclist-image"><div class="facility-<%= fac.LaundryService%>"></td>
+     <td class="faclist-title">Laundry Service</td>
+
+     <td class="faclist-image"><div class="facility-<%= fac.MeetingFacilities%>"></td>
+     <td class="faclist-title">Meeting Facilities</td>
+
+     <td class="faclist-image"><div class="facility-<%= fac.NightClub%>"></div></td>
+     <td class="faclist-title">Night Club</td>
+
+     <td class="faclist-image"><div class="facility-<%= fac.PetsAllowed%>"></div></td>
+     <td class="faclist-title">Pets Allowed</td>
+   </tr>
+   <tr>
+     <td class="faclist-image"><div class="facility-<%= fac.PoolsideBar %>"></div></td>
+     <td class="faclist-title">Pool side Bar</td>
+
+     <td class="faclist-image"><div class="facility-<%= fac.Restaurant %>"></div></td>
+     <td class="faclist-title">Restaurant</td>
+
+     <td class="faclist-image"><div class="facility-<%= fac.RoomService %>"></div></td>
+     <td class="faclist-title">Room Service</td>
+
+     <td class="faclist-image"><div class="facility-<%= fac.SafetyBox %>"></div></td>
+     <td class="faclist-title">Safety Box</td>
+
+     <td class="faclist-image"><div class="facility-<%= fac.Salon %>"></div></td>
+     <td class="faclist-title">Salon</td>
+   </tr>
+   <tr>
+     <td class="faclist-image"><div class="facility-<%= fac.Shops%>"></div></td>
+     <td class="faclist-title">Shops</td>
+
+     <td class="faclist-image"><div class="facility-<%= fac.ShuttleService%>"></div></td>
+     <td class="faclist-title">Shuttle Service</td>
+
+     <td class="faclist-image"><div class="facility-<%= fac.SmokingArea%>"></div></td>
+     <td class="faclist-title">Smoking Area</td>
+
+     <td class="faclist-image"><div class="facility-<%= fac.Tours%>"></div></td>
+     <td class="faclist-title">Tours</td>
+
+     <td class="faclist-image"><div class="facility-<%= fac.WifiPublicAreas%>"></div></td>
+     <td class="faclist-title">Wifi Public Areas</td>
+   </tr>
+   <tr>
+     <td class="faclist-image"><div class="facility-<%= fac.CreaditCard%>"></div></td>
+     <td class="faclist-title">Creadit Card</td>
+   </tr>
+</table>
+<% end %>
+</div>

@@ -1,0 +1,71 @@
+<div class="row">
+   <h4>レクリエーション 一覧</h4>
+   <% @recreation.each do |rec|%>
+   <table class="recreation-list">
+   <tr>
+     <td class="reclist-image"><div class="recreation-<%= rec.FitnessCenter%>"></div></td>
+     <td class="reclist-title">Fitness Center</td>
+
+     <td class="reclist-image"><div class="recreation-<%= rec.GamesRoom %>"></div></td>
+     <td class="reclist-title">Games Room</td>
+
+     <td class="reclist-image"><div class="recreation-<%= rec.garden %>"></div></td>
+     <td class="reclist-title">Garden</td>
+
+     <td class="reclist-image"><div class="recreation-<%= rec.GolfCourseOnSite%>"</td>
+     <td class="reclist-title">Golf Course (OnSite)</td>
+
+     <td class="reclist-image"><div class="recreation-<%= rec.GolfCourseWithin3km%>"></td>
+     <td class="reclist-title">Golf Course (Within3km)</td>
+   </tr>
+   <tr>
+     <td class="reclist-image"><div class="recreation-<%= rec.HotSpringBath %>"></div></td>
+     <td class="reclist-title">Hot Spring Bath</td>
+
+     <td class="reclist-image"><div class="recreation-<%= rec.IndoorPool %>"></div></td>
+     <td class="reclist-title">Indoor Pool</td>
+
+     <td class="reclist-image"><div class="recreation-<%= rec.Jacuzzi %>"></div></td>
+     <td class="reclist-title">Jacuzzi</td>
+
+     <td class="reclist-image"><div class="recreation-<%= rec.KidsClub %>"></div></td>
+     <td class="reclist-title">Kids Club</td>
+
+     <td class="reclist-image"><div class="recreation-<%= rec.Massage %>"></td>
+     <td class="reclist-title">Massage</td>
+   </tr>
+   <tr>
+     <td class="reclist-image"><div class="recreation-<%= rec.OutdoorPool %>"></td>
+     <td class="reclist-title">Outdoor Pool</td>
+
+     <td class="reclist-image"><div class="recreation-<%= rec.KidPool %>"></td>
+     <td class="reclist-title">Kid Pool</td>
+
+     <td class="reclist-image"><div class="recreation-<%= rec.PrivateBeach %>"></td>
+     <td class="reclist-title">Private Beach</td>
+
+     <td class="reclist-image"><div class="recreation-<%= rec.Sauna %>"></div></td>
+     <td class="reclist-title">Sauna</td>
+
+     <td class="reclist-image"><div class="recreation-<%= rec.Spa %>"></div></td>
+     <td class="reclist-title">Spa</td>
+   </tr>
+   <tr>
+     <td class="reclist-image"><div class="recreation-<%= rec.SquashCourts %>"></div></td>
+     <td class="reclist-title">Squash Courts</td>
+
+     <td class="reclist-image"><div class="recreation-<%= rec.SteamRoom %>"></div></td>
+     <td class="reclist-title">Steam Room</td>
+
+     <td class="reclist-image"><div class="recreation-<%= rec.TennisCourts %>"></div></td>
+     <td class="reclist-title">Tennis Courts</td>
+
+     <td class="reclist-image"><div class="recreation-<%= rec.WaterSportsMotorized %>"></div></td>
+     <td class="reclist-title">Water Sports Motorized</td>
+
+     <td class="reclist-image"><div class="recreation-<%= rec.WaterSportsNonmotorized %>"></div></td>
+     <td class="reclist-title">Water Sports Nonmotorized</td>
+   </tr>
+</table>
+<% end %>
+</div>

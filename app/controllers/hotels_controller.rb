@@ -5,5 +5,7 @@ class HotelsController < ApplicationController
     @facility = @hotel.facilities
     @photo = @hotel.photos
     @area = @hotel.areas
+    @amenity = @hotel.amenities
+    @recreation = @hotel.recreations
   end
 end

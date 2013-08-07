@@ -42,46 +42,53 @@
    <div id="map_canvas" class="span7" style="height:300px;"></div>
   </div>
 </div>
-
+<div class="row">
+  <div class="span8">
 <p>
    <b>free_wifi:</b>
-  <div class="freewifi-<%= @hotel.free_wifi %>"></div>
+  <div class="freewifi-<%= @hotel.free_wifi %>">free_wifi</div>
 </p>
 
 <p>
   <b>charged_wifi</b>
-  <div class="freewifi-<%= @hotel.charged_wifi %>"></div>
+  <div class="freewifi-<%= @hotel.charged_wifi %>">charged_wifi</div>
 </p>
+
 
 <% @facility.each do |fac|%>
-<p>
-<b>Room Service:</b>
-<div class="facility-<%= fac.RoomService24hr%>"></div>
-</p>
+<li>
+  <b>Room Service:</b>
+  <div class="facility-<%= fac.RoomService24hr%>"></div>
+</li>
 
-<p>
-<b>Family Room</b>
-<div class="facility-<%= fac.FamilyRoom %>"></div>
-</p>
+<li>
+  <b>Family Room</b>
+  <div class="facility-<%= fac.FamilyRoom %>"></div>
+</li>
 
-<p>
-<b>Restaurant</b>
-<div class="facility-<%= fac.Restaurant %>"></div>
-</p>
+<li>
+  <b>Restaurant</b>
+  <div class="facility-<%= fac.Restaurant %>"></div>
+</li>
 
-<p>
-<b>Nightclub</b>
-<div class="facility-<%= fac.NightClub %>"></div>
-</p>
-<p>
-<b>Tours</b>
-<div class="facility-<%= fac.Tours %>"></div>
-</p>
-<p>
-<b>Wifi Public Areas</b>
-<div class="facility-<%= fac.WifiPublicAreas %>"></div>
-</p>
+<li>
+  <b>Nightclub</b>
+  <div class="facility-<%= fac.NightClub %>"></div>
+</li>
+
+<li>
+  <b>Tours</b>
+  <div class="facility-<%= fac.Tours %>"></div>
+</li>
+
+<li>
+  <b>Wifi Public Areas</b>
+  <div class="facility-<%= fac.WifiPublicAreas %>"></div>
+</li>
 <% end %>
+</ul>
+  </div>
+</div>
 
 <h1>Photos</h1>
 

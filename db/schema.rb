@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130806101539) do
+ActiveRecord::Schema.define(:version => 20130807041341) do
 
   create_table "administrators", :force => true do |t|
     t.string   "admin_name"
@@ -152,6 +152,16 @@ ActiveRecord::Schema.define(:version => 20130806101539) do
   add_index "hotel_facilities", ["facility_id"], :name => "index_hotel_facilities_on_facility_id"
   add_index "hotel_facilities", ["hotel_id"], :name => "index_hotel_facilities_on_hotel_id"
 
+  create_table "hotel_recreations", :force => true do |t|
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "hotel_id"
+    t.integer  "recreation_id"
+  end
+
+  add_index "hotel_recreations", ["hotel_id"], :name => "index_hotel_recreations_on_hotel_id"
+  add_index "hotel_recreations", ["recreation_id"], :name => "index_hotel_recreations_on_recreation_id"
+
   create_table "hotels", :force => true do |t|
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
@@ -271,6 +281,23 @@ ActiveRecord::Schema.define(:version => 20130806101539) do
   add_index "recreations", ["WaterSportsMotorized"], :name => "index_recreations_on_WaterSportsMotorized"
   add_index "recreations", ["WaterSportsNonmotorized"], :name => "index_recreations_on_WaterSportsNonmotorized"
   add_index "recreations", ["garden"], :name => "index_recreations_on_garden"
+
+  create_table "taggings", :force => true do |t|
+    t.integer  "tag_id"
+    t.integer  "taggable_id"
+    t.string   "taggable_type"
+    t.integer  "tagger_id"
+    t.string   "tagger_type"
+    t.string   "context",       :limit => 128
+    t.datetime "created_at"
+  end
+
+  add_index "taggings", ["tag_id"], :name => "index_taggings_on_tag_id"
+  add_index "taggings", ["taggable_id", "taggable_type", "context"], :name => "index_taggings_on_taggable_id_and_taggable_type_and_context"
+
+  create_table "tags", :force => true do |t|
+    t.string "name"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"
