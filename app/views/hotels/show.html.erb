@@ -3,6 +3,14 @@
   <b><%= area.state %> ></b>
   <b><%= area.city %></b>
   <% end %>
+
+ <% @state.each do |state| %>
+   <%= state.name %>
+ <% end %>
+
+ <% @city.each do |city| %>
+     <%= city.name %>
+ <% end %>
   <div class="span6">
     <h3><%= @hotel.name_ja%></h3>
     <h3><%= @hotel.name_en %></h3>

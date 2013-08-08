@@ -7,5 +7,7 @@ class HotelsController < ApplicationController
     @area = @hotel.areas
     @amenity = @hotel.amenities
     @recreation = @hotel.recreations
+    @state = @hotel.states
+    @city = @hotel.cities
   end
 end

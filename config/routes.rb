@@ -19,6 +19,8 @@ JapanHotel::Application.routes.draw do
 
    resources :areas
 
+   resources :states
+
    resources :sessions, only: [:new, :create, :destroy]
    match "/log_in" => "sessions#new", :as => :log_in
    match "/log_out" => "sessions#destroy", :as => :log_out

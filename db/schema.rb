@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130807041341) do
+ActiveRecord::Schema.define(:version => 20130808081541) do
 
   create_table "administrators", :force => true do |t|
     t.string   "admin_name"
@@ -62,6 +62,22 @@ ActiveRecord::Schema.define(:version => 20130807041341) do
   add_index "areas", ["city"], :name => "index_areas_on_city"
   add_index "areas", ["district"], :name => "index_areas_on_district"
   add_index "areas", ["state"], :name => "index_areas_on_state"
+
+  create_table "cities", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "name"
+  end
+
+  add_index "cities", ["name"], :name => "index_cities_on_name"
+
+  create_table "districts", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "name"
+  end
+
+  add_index "districts", ["name"], :name => "index_districts_on_name"
 
   create_table "facilities", :force => true do |t|
     t.datetime "created_at",         :null => false
@@ -142,6 +158,16 @@ ActiveRecord::Schema.define(:version => 20130807041341) do
   add_index "hotel_areas", ["area_id"], :name => "index_hotel_areas_on_area_id"
   add_index "hotel_areas", ["hotel_id"], :name => "index_hotel_areas_on_hotel_id"
 
+  create_table "hotel_cities", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "hotel_id"
+    t.integer  "city_id"
+  end
+
+  add_index "hotel_cities", ["city_id"], :name => "index_hotel_cities_on_city_id"
+  add_index "hotel_cities", ["hotel_id"], :name => "index_hotel_cities_on_hotel_id"
+
   create_table "hotel_facilities", :force => true do |t|
     t.integer  "hotel_id"
     t.integer  "facility_id"
@@ -161,6 +187,16 @@ ActiveRecord::Schema.define(:version => 20130807041341) do
 
   add_index "hotel_recreations", ["hotel_id"], :name => "index_hotel_recreations_on_hotel_id"
   add_index "hotel_recreations", ["recreation_id"], :name => "index_hotel_recreations_on_recreation_id"
+
+  create_table "hotel_states", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "hotel_id"
+    t.integer  "state_id"
+  end
+
+  add_index "hotel_states", ["hotel_id"], :name => "index_hotel_states_on_hotel_id"
+  add_index "hotel_states", ["state_id"], :name => "index_hotel_states_on_state_id"
 
   create_table "hotels", :force => true do |t|
     t.datetime "created_at",     :null => false
@@ -281,6 +317,24 @@ ActiveRecord::Schema.define(:version => 20130807041341) do
   add_index "recreations", ["WaterSportsMotorized"], :name => "index_recreations_on_WaterSportsMotorized"
   add_index "recreations", ["WaterSportsNonmotorized"], :name => "index_recreations_on_WaterSportsNonmotorized"
   add_index "recreations", ["garden"], :name => "index_recreations_on_garden"
+
+  create_table "state_cities", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "state_id"
+    t.integer  "city_id"
+  end
+
+  add_index "state_cities", ["city_id"], :name => "index_state_cities_on_city_id"
+  add_index "state_cities", ["state_id"], :name => "index_state_cities_on_state_id"
+
+  create_table "states", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "name"
+  end
+
+  add_index "states", ["name"], :name => "index_states_on_name"
 
   create_table "taggings", :force => true do |t|
     t.integer  "tag_id"
