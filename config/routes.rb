@@ -1,5 +1,7 @@
 JapanHotel::Application.routes.draw do
 
+  #get "areas/show"
+
   #get "static_pages/home"
 
   #get "static_pages/about"
@@ -7,11 +9,15 @@ JapanHotel::Application.routes.draw do
   match "/" => "static_pages#home", :as => :root
   match "/about" => "static_pages#about", :as => :about
   match "/hotel_search" => "static_pages#hotel_search", :via =>:get, :as => :hotel_search
+  match "/area_search" => "areas#area_search", :as => :area_search
+
   resources :hotels, only: [:show]
   #get "password_resets/new"
   resources :password_resets
   resources :users, only: [:new, :create, :show, :edit, :update]
    match "/sign_up" => "users#new", :as => :sign_up
+
+   resources :areas
 
    resources :sessions, only: [:new, :create, :destroy]
    match "/log_in" => "sessions#new", :as => :log_in

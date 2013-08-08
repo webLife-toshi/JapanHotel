@@ -1,0 +1,6 @@
+<h1>Areas#show</h1>
+<%= @area.state %> / <%= @area.city %>
+
+<% @hotel.each do |hotel| %>
+  <%= link_to hotel.name_en, hotel_path(hotel) %>
+<% end %>

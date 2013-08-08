@@ -3,5 +3,5 @@ class Area < ActiveRecord::Base
 
    acts_as_taggable
    has_many :hotel_areas
-   has_many :hotel, :through => :hotel_areas
+   has_many :hotels, :through => :hotel_areas, :dependent => :destroy
 end

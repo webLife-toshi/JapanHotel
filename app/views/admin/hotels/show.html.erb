@@ -2,8 +2,8 @@
     <div class="span8">
     <% @area.each do |area| %>
     <ul class="breadcrumb">
-      <li><a href=""><%= area.state %></a> > </li>
-      <li><a href=""><%= area.city %></a></li>
+      <li><%= area.state %> > </li>
+      <li><%= area.city %></li>
     </ul>
     <% end %>
     </div>
